@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
+  resources :books
   devise_for :users
   root 'pages#home'
-  #resources :pages
-  #get 'pages/about'
   get 'about', to: 'pages#about'
 
   # The priority is based upon order of creation: first created -> highest priority.
