@@ -1,3 +1,23 @@
+<div class="row">
+  <div class="col-md-6">
+    <%= image_tag "rails4.jpg", class: "img-responsive" %>
+  </div>
+  <div class="col-md-6">
+    <h3><%= @book.name %> by <%= @book.author %></h3>
+    <p>
+      <strong>Description:</strong>
+      <%= @book.description %>
+    </p>
+
+    <h4 class="text-center">
+      <strong>Price:</strong>
+      $<%= @book.price.to_d/100 %>
+    </h4>
+  </div>
+</div>
+
+<!--
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -24,6 +44,8 @@
   <strong>Availability:</strong>
   <%= @book.availability %>
 </p>
+-->
+
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
