@@ -7,6 +7,9 @@ gem "font-awesome-rails"
 gem "cancan"
 gem 'paperclip'
 gem 'dotenv-rails', group: :development
+#gem 'aws-sdk'
+# Gemfile
+gem 'aws-sdk', '< 2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
