@@ -1,0 +1,31 @@
+<div class="row">
+  <h1 class="text-center">Dashboard</h1>
+
+  <div class="col-md-4">
+    <h2 class="text-center">Books</h2>
+    <div class="dashboard-container">
+      <table class="table table-condensed">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Status</th>
+          <th><%= link_to "<i class='fa fa-file fa-0'></i>".html_safe,  new_book_path, class: 'pull-right' %></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @books.each do |book| %>
+            <tr>
+              <td><%= book.id %></td>
+              <td><%= link_to book.name, book_path(book) %></td>
+              <td><%= book.availability %></td>
+              <td><%= link_to 'Edit', edit_book_path(book) %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-md-4"></div>
+  <div class="col-md-4"></div>
+</div>
