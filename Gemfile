@@ -6,6 +6,7 @@ gem 'devise'
 gem "font-awesome-rails"
 gem "cancan"
 gem 'paperclip'
+gem 'dotenv-rails', group: :development
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
