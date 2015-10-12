@@ -1,12 +1,14 @@
 <div class="col-sm-4 col-md-3">
   <div class="thumbnail">
     <%= link_to book_path(book) do %>
-    <%= image_tag "rails4.jpg", class: "img-responsive" %>
+        <%= image_tag book.image.url(:original), class: "img-responsive" %>
+        <% if current_user %>
+            <%= render 'book_edit_link', book: book %>
+        <% end %>
+    <% end %>
     <div class="caption">
-      <p><strong></string><%= book.name %></strong></p>
+      <p><strong><%= link_to book.name, book_path(book) %></strong></p>
       <p><%= book.price_fmt %></p>
     </div>
-    <%= render 'book_edit_link', book: book %>
-    <% end %>
   </div>
 </div>
