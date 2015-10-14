@@ -10,6 +10,7 @@ gem 'dotenv-rails', group: :development
 #gem 'aws-sdk'
 # Gemfile
 gem 'aws-sdk', '< 2.0'
+gem 'friendly_id'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'

@@ -1,4 +1,8 @@
 class Book < ActiveRecord::Base
+
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   include ActionView::Helpers
 
   belongs_to :user
@@ -19,5 +23,9 @@ class Book < ActiveRecord::Base
 
   def price_fmt
     number_to_currency(price.to_d/100)
+  end
+
+  def should_generate_new_friendly_id?
+    name_changed?
   end
 end
