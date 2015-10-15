@@ -6,6 +6,7 @@ class Book < ActiveRecord::Base
   include ActionView::Helpers
 
   belongs_to :user
+  has_many :sales
 
   has_attached_file :image
   has_attached_file :resource
@@ -20,6 +21,7 @@ class Book < ActiveRecord::Base
 
   validates :image, attachment_presence: true
   validates :resource, attachment_presence: true
+  validates_numericality_of :price, greater_than:  49, message: "Must be greater than 50 cents"
 
   def price_fmt
     number_to_currency(price.to_d/100)
