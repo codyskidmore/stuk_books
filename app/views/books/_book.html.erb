@@ -2,9 +2,9 @@
   <div class="thumbnail">
     <%= link_to book_path(book) do %>
         <%= image_tag book.image.url(:original), class: "img-responsive" %>
-        <% if current_user %>
+        <!--<% if current_user %>
             <%= render 'book_edit_link', book: book %>
-        <% end %>
+        <% end %>-->
     <% end %>
     <div class="caption">
       <p><strong><%= link_to book.name, book_path(book) %></strong></p>
